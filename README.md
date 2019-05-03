@@ -1,2 +1,2 @@
-[![Build Status](https://travis-ci.org/ivan-nor/project-lvl1-s486.svg?branch=master)](https://travis-ci.org/ivan-nor/project-lvl1-s486)
+[![Build Status](https://travis-ci.com/ivan-nor/project-lvl1-s486.svg?branch=master)](https://travis-ci.com/ivan-nor/project-lvl1-s486)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c756f8050e5cd2555849/maintainability)](https://codeclimate.com/github/ivan-nor/project-lvl1-s486/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/c756f8050e5cd2555849/test_coverage)](https://codeclimate.com/github/ivan-nor/project-lvl1-s486/test_coverage)
