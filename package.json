@@ -1,0 +1,40 @@
+{
+  "name": "hexlet-brain-games-nor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "babel-node": "babel-node",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "author": "Ivan Nor",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan-nor/project-lvl1-s486.git"
+  },
+  "keywords": [
+    "hexlet",
+    "brain-games",
+    "js",
+    "javascript"
+  ],
+  "bugs": {
+    "url": "https://github.com/ivan-nor/project-lvl1-s486/issues"
+  },
+  "homepage": "https://github.com/ivan-nor/project-lvl1-s486#readme",
+  "description": "Ivan Nor - first project on Hexlet.io JavaScript"
+}
