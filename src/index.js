@@ -1,6 +1,6 @@
+import readlineSync from 'readline-sync';
 
-const readline = require('readline-sync');
-
-const name = readline.question("May I have your name?  ");
-
-console.log("Hello, " + name + "!");
+export const sayHi = () => {
+    const userName = readlineSync.question('May I have your name, please? ');
+    console.log(`Hello, ${userName}!`);
+};
