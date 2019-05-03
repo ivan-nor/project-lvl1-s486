@@ -1,7 +1,0 @@
-#!/usr/bin/env node
-"use strict";
-
-require("../../src/index.js");
-
-console.log('Welcome to the Brain Games!');
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9iaW4vYnJhaW4tZ2FtZXMuanMiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6IkFBQUE7OztBQUdBOztBQUZBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSw2QkFBWiIsInNvdXJjZXNDb250ZW50IjpbIiMhL3Vzci9iaW4vZW52IG5vZGVcbmNvbnNvbGUubG9nKCdXZWxjb21lIHRvIHRoZSBCcmFpbiBHYW1lcyEnKTtcblxuaW1wb3J0IHsgfSBmcm9tICcuLi8uLi9zcmMvaW5kZXguanMnXG4iXX0=
