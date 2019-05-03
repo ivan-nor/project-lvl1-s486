@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-console.log('Welcome to the Brain Games!');
+import sayHi from '../index';
 
-import sayHi from '../../src/index.js'
+console.log('Welcome to the Brain Games!');
 
 sayHi();
