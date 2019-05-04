@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { sayHi } from '../index';
+import { askName } from '../index';
 
-sayHi();
+askName();
