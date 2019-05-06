@@ -35,26 +35,10 @@ const equalAnswer = (userAnswer, isTrue) => userAnswer === isTrue;
 
 const correctAnswer = () => console.log('Correct!');
 
-const getRandomOperation = (begin, end) => {
-  const randomOperation = getRandomNumber(begin, end);
-  let result = '';
-  switch (randomOperation) {
-    case 1:
-      result = '+';
-      break;
-    case 2:
-      result = '-';
-      break;
-    case 3:
-      result = '*';
-      break;
-    case 4:
-      result = '/';
-      break;
-    default:
-      console.log('default');
-  }
-  return result;
+const getRandomOperation = () => {
+  const operations = ['+', '-', '*', '/'];
+  const random = Math.floor(Math.random() * operations.length);
+  return random;
 };
 
 const oops = (userName, userAnswer, isRight) => console.log(
