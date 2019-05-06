@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 import {
   welcome, askName, getRandomNumber, congratulations, endGame,
-  askQuestion, equalAnswer, askAnswer, correctAnswer,
+  askQuestion, equalAnswer, askAnswer, correctAnswer, oops,
 } from '../index';
-
-const oops = (userName, userAnswer, isEven) => console.log(
-  `'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven}'. Let's try again, ${userName}!`,
-);
 
 const conditionsGamesEven = () => {
   console.log('Answer "yes" if number even otherwise answer "no"');
