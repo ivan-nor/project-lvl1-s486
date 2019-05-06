@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-// спросить имя отдать имя
 const askName = () => {
   const userName = readlineSync.question('May I have your name, please? ');
   console.log(`Hello, ${userName}!`);
@@ -30,9 +29,9 @@ const endGame = () => {
   process.exit();
 };
 
-const askQuestion = item => console.log(`Question: ${item}`);
+const askQuestion = item => console.log(`Question: ${item} ?`);
 
-const equalAnswer = (userAnswer, isEven) => userAnswer === isEven;
+const equalAnswer = (userAnswer, isTrue) => userAnswer === isTrue;
 
 const correctAnswer = () => console.log('Correct!');
 
