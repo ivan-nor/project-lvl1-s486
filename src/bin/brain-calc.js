@@ -19,7 +19,7 @@ const game = () => {
     const resultGame = {};
     resultGame.firstRandomNumber = getRandomNumber();
     resultGame.secondRandomNumber = getRandomNumber();
-    resultGame.randomOperation = getRandomOperation(1, 3);
+    resultGame.randomOperation = getRandomOperation();
     resultGame.stringQuestion = getStringCalc(
       resultGame.firstRandomNumber, resultGame.secondRandomNumber, resultGame.randomOperation,
     );
