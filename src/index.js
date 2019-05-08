@@ -42,7 +42,23 @@ const oops = (userName, userAnswer, isRight) => console.log(
   `'${userAnswer}' is wrong answer ;(. Correct answer was '${isRight}'. Let's try again, ${userName}!`,
 );
 
+const isPrime = (numb) => {
+  if (numb < 2) {
+    return false;
+  }
+  if (numb % 2 === 0) {
+    return false;
+  }
+  for (let i = 3; i < numb; i += 1) {
+    if (numb % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
 export {
   askName, askAnswer, welcome, getRandomNumber, congratulations, oops,
   endGame, askQuestion, equalAnswer, correctAnswer, getRandomOperation,
+  isPrime,
 };
