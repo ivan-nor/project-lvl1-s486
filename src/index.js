@@ -15,11 +15,7 @@ const welcome = () => {
   console.log('Welcome to the Brain Games!');
 };
 
-const getRandomNumber = (min = 0, max = 100) => {
-  let rand = min - 0.5 + Math.random() * (max - min + 1);
-  rand = Math.round(rand);
-  return rand;
-};
+const getRandomNumber = (min = 0, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const congratulations = (userName) => {
   console.log(`Congratulations, ${userName}!`);
@@ -35,10 +31,11 @@ const equalAnswer = (userAnswer, isTrue) => userAnswer === isTrue;
 
 const correctAnswer = () => console.log('Correct!');
 
-const getRandomOperation = () => {
-  const operations = ['+', '-', '*', '/'];
-  const random = Math.floor(Math.random() * operations.length);
-  return random;
+const getRandomOperation = (length = 4) => {
+  const arr = ['+', '-', '*', '/'];
+  const operations = arr.slice(0, length);
+  const random = getRandomNumber(0, 1);
+  return operations[random];
 };
 
 const oops = (userName, userAnswer, isRight) => console.log(
