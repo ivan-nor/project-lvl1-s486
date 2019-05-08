@@ -7,7 +7,9 @@ import {
 
 const conditionsGamesGcd = () => console.log('Find the greatest common divisor of given numbers.');
 
-const gcdRecursion = (n1, n2) => {
+const gcdRecursion = (first, second) => {
+  let n1 = first;
+  let n2 = second;
   if (n2 === 0) {
     return n1;
   }
