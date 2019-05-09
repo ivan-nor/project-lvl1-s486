@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
 
 import {
   welcome, askName, endGame, congratulations, getRandomNumber,
@@ -24,7 +24,7 @@ const gcdRecursion = (first, second) => {
   return gcdRecursion(n2, n1 % n2);
 };
 
-const start = () => {
+export default () => {
   welcome();
   const userName = askName();
   conditionsGamesGcd();
@@ -49,5 +49,3 @@ const start = () => {
   congratulations(userName);
   endGame();
 };
-
-start();
