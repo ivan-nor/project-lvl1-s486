@@ -3,7 +3,7 @@ node_js:
   - node
 script:
   - make lint
-  - make test-coverage
+  - make test
 env:
   global:
     - CC_TEST_REPORTER_ID=b3d6774123481fc320a8564ba195d9482c9bfe7e0676931108dfa69464ee6a6e
