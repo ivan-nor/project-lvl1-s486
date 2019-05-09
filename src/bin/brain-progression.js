@@ -1,9 +1,8 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
 
 import {
   welcome, askName, correctAnswer, oops, endGame, getRandomNumber,
   getRandomOperation, askAnswer, equalAnswer, congratulations, askQuestion,
-
 } from '../index';
 
 const conditionGameProgress = () => console.log('What number is missing in the progression?');
@@ -25,7 +24,7 @@ const removeRandomElement = (array, index) => {
   return progress;
 };
 
-const start = () => {
+export default () => {
   welcome();
   conditionGameProgress();
   const userName = askName();
@@ -51,5 +50,3 @@ const start = () => {
   }
   congratulations(userName);
 };
-
-start();
