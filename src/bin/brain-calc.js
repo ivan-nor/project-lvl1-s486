@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
 
 import {
   welcome, askName, getRandomNumber, congratulations,
@@ -10,7 +10,7 @@ const conditionsGamesCalc = () => console.log('What is the result of the express
 
 const getStringCalc = (first, second, operation) => `${first}${operation}${second}`;
 
-const game = () => {
+export default () => {
   welcome();
   conditionsGamesCalc();
   const userName = askName();
@@ -40,5 +40,3 @@ const game = () => {
 
   endGame();
 };
-
-game();
