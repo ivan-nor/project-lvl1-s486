@@ -1,9 +1,13 @@
+plugins:
+  - jest
 env:
   browser: true
   es6: true
   node: true
+  jest: true
 extends: 
   - airbnb-base
+  - 'plugin:jest/recommended'
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
