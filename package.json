@@ -9,7 +9,8 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "eslint": "npx eslint ."
+    "eslint": "npx eslint .",
+    "test": "jest"
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -22,11 +23,16 @@
   "author": "Ivan Nor",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.17.2"
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0"
   },
   "dependencies": {
     "@babel/cli": "^7.4.4",
@@ -43,7 +49,8 @@
     "hexlet",
     "brain-games",
     "js",
-    "javascript"
+    "javascript",
+    "Ivan Nor"
   ],
   "bugs": {
     "url": "https://github.com/ivan-nor/project-lvl1-s486/issues"
