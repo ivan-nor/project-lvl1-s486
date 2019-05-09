@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
+
 import {
   welcome, askName, getRandomNumber, congratulations, endGame,
   askQuestion, equalAnswer, askAnswer, correctAnswer, oops,
@@ -13,7 +14,7 @@ const getEven = (number) => {
   return result;
 };
 
-const game = () => {
+export default () => {
   welcome();
   conditionsGamesEven();
   const userName = askName();
@@ -38,5 +39,3 @@ const game = () => {
 
   endGame();
 };
-
-game();
