@@ -16,3 +16,8 @@ brain-progression:
 	npx babel-node src/bin/brain-progression.js
 brain-prime:
 	npx babel-node src/bin/brain-prime.js
+test:
+	npm test
+build:
+	rm -rf dist
+  npm run build
