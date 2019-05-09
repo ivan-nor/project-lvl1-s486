@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+// #!/usr/bin/env node
 
 import {
   welcome, askName, congratulations, getRandomNumber,
@@ -10,7 +10,7 @@ const conditionGamePrime = () => console.log('Answer "yes" if given number is pr
 
 const stringIsPrime = numb => ((!numb) ? 'no' : 'yes');
 
-const start = () => {
+export default () => {
   welcome();
   conditionGamePrime();
   const userName = askName();
@@ -33,5 +33,3 @@ const start = () => {
   congratulations(userName);
   endGame();
 };
-
-start();
