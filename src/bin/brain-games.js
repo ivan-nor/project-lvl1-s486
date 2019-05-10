@@ -20,7 +20,7 @@ const changeGame = (user) => {
   console.log('4. Guess missing number');
   console.log('5. Prime number');
   console.log('0. Exit');
-  const choice = readlineSync.question('Your mchoice: ');
+  const choice = readlineSync.question('Your choice: ');
   switch (choice) {
     case '1':
       gameEven(user);
