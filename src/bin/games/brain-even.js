@@ -3,7 +3,7 @@
 import {
   getRandomNumber, congratulations, endGame,
   askQuestion, equalAnswer, askAnswer, correctAnswer, oops,
-} from '../index';
+} from '../../index';
 
 const conditionsGamesEven = () => {
   console.log('Answer "yes" if number even otherwise answer "no"');

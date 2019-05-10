@@ -3,7 +3,7 @@
 import {
   correctAnswer, oops, endGame, getRandomNumber,
   getRandomOperation, askAnswer, equalAnswer, congratulations, askQuestion,
-} from '../index';
+} from '../../index';
 
 const conditionGameProgress = () => console.log('What number is missing in the progression?');
 

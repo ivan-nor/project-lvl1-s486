@@ -4,7 +4,7 @@ import {
   getRandomNumber, congratulations,
   endGame, correctAnswer, askAnswer, askQuestion, equalAnswer,
   getRandomOperation, oops,
-} from '../index';
+} from '../../index';
 
 const conditionsGamesCalc = () => console.log('What is the result of the expression?');
 

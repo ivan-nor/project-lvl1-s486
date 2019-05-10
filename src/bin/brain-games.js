@@ -2,11 +2,11 @@
 
 import readlineSync from 'readline-sync';
 import { askName, welcome } from '../index';
-import gameCalc from './brain-calc';
-import gameEven from './brain-even';
-import gameGCD from './brain-gcd';
-import gamePrime from './brain-prime';
-import gameProgression from './brain-progression';
+import gameCalc from './games/brain-calc';
+import gameEven from './games/brain-even';
+import gameGCD from './games/brain-gcd';
+import gamePrime from './games/brain-prime';
+import gameProgression from './games/brain-progression';
 
 welcome();
 

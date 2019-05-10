@@ -3,7 +3,7 @@
 import {
   endGame, congratulations, getRandomNumber,
   askQuestion, askAnswer, correctAnswer, oops, equalAnswer,
-} from '../index';
+} from '../../index';
 
 const conditionsGamesGcd = () => console.log('Find the greatest common divisor of given numbers.');
 

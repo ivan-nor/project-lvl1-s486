@@ -4,7 +4,7 @@ import {
   congratulations, getRandomNumber,
   askQuestion, askAnswer, equalAnswer, oops,
   correctAnswer, endGame, isPrime,
-} from '../index';
+} from '../../index';
 
 const conditionGamePrime = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
