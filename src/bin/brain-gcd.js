@@ -24,9 +24,8 @@ const gcdRecursion = (first, second) => {
   return gcdRecursion(n2, n1 % n2);
 };
 
-export default () => {
+export default (userName) => {
   welcome();
-  const userName = askName();
   conditionsGamesGcd();
 
   for (let i = 1; i <= 3; i += 1) {

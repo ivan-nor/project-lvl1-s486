@@ -10,10 +10,9 @@ const conditionsGamesCalc = () => console.log('What is the result of the express
 
 const getStringCalc = (first, second, operation) => `${first}${operation}${second}`;
 
-export default () => {
+export default (userName) => {
   welcome();
   conditionsGamesCalc();
-  const userName = askName();
 
   for (let i = 1; i <= 3; i += 1) {
     const resultGame = {};

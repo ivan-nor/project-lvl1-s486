@@ -10,10 +10,9 @@ const conditionGamePrime = () => console.log('Answer "yes" if given number is pr
 
 const stringIsPrime = numb => ((!numb) ? 'no' : 'yes');
 
-export default () => {
+export default (userName) => {
   welcome();
   conditionGamePrime();
-  const userName = askName();
 
   for (let i = 1; i <= 3; i += 1) {
     const game = {};

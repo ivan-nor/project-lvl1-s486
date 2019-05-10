@@ -14,10 +14,9 @@ const getEven = (number) => {
   return result;
 };
 
-export default () => {
+export default (userName) => {
   welcome();
   conditionsGamesEven();
-  const userName = askName();
 
   for (let i = 1; i <= 3; i += 1) {
     const resultGame = {};

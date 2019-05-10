@@ -24,10 +24,9 @@ const removeRandomElement = (array, index) => {
   return progress;
 };
 
-export default () => {
+export default (userName) => {
   welcome();
   conditionGameProgress();
-  const userName = askName();
 
   for (let i = 1; i <= 3; i += 1) {
     const game = {};
