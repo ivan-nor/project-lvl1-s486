@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import {
-  welcome, askName, getRandomNumber, congratulations, endGame,
+  getRandomNumber, congratulations, endGame,
   askQuestion, equalAnswer, askAnswer, correctAnswer, oops,
 } from '../index';
 
@@ -15,7 +15,6 @@ const getEven = (number) => {
 };
 
 export default (userName) => {
-  welcome();
   conditionsGamesEven();
 
   for (let i = 1; i <= 3; i += 1) {

@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import {
-  welcome, askName, correctAnswer, oops, endGame, getRandomNumber,
+  correctAnswer, oops, endGame, getRandomNumber,
   getRandomOperation, askAnswer, equalAnswer, congratulations, askQuestion,
 } from '../index';
 
@@ -25,7 +25,6 @@ const removeRandomElement = (array, index) => {
 };
 
 export default (userName) => {
-  welcome();
   conditionGameProgress();
 
   for (let i = 1; i <= 3; i += 1) {

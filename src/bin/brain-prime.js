@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import {
-  welcome, askName, congratulations, getRandomNumber,
+  congratulations, getRandomNumber,
   askQuestion, askAnswer, equalAnswer, oops,
   correctAnswer, endGame, isPrime,
 } from '../index';
@@ -11,7 +11,6 @@ const conditionGamePrime = () => console.log('Answer "yes" if given number is pr
 const stringIsPrime = numb => ((!numb) ? 'no' : 'yes');
 
 export default (userName) => {
-  welcome();
   conditionGamePrime();
 
   for (let i = 1; i <= 3; i += 1) {

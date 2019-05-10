@@ -1,7 +1,7 @@
 // #!/usr/bin/env node
 
 import {
-  welcome, askName, getRandomNumber, congratulations,
+  getRandomNumber, congratulations,
   endGame, correctAnswer, askAnswer, askQuestion, equalAnswer,
   getRandomOperation, oops,
 } from '../index';
@@ -11,7 +11,6 @@ const conditionsGamesCalc = () => console.log('What is the result of the express
 const getStringCalc = (first, second, operation) => `${first}${operation}${second}`;
 
 export default (userName) => {
-  welcome();
   conditionsGamesCalc();
 
   for (let i = 1; i <= 3; i += 1) {
