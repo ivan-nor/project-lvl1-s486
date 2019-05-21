@@ -1,6 +1,6 @@
 {
   "name": "hexlet-brain-games-nor",
-  "version": "1.9.2",
+  "version": "1.9.5",
   "main": "index.js",
   "files": [
     "dist"
