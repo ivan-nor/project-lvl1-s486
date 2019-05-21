@@ -34,7 +34,7 @@ const correctAnswer = () => console.log('Correct!');
 const getRandomOperation = (length = 4) => {
   const arr = ['+', '-', '*', '/'];
   const operations = arr.slice(0, length);
-  const random = getRandomNumber(0, 1);
+  const random = getRandomNumber(0, length - 1);
   return operations[random];
 };
 
@@ -42,23 +42,33 @@ const oops = (userName, userAnswer, isRight) => console.log(
   `'${userAnswer}' is wrong answer ;(. Correct answer was '${isRight}'. Let's try again, ${userName}!`,
 );
 
-const isPrime = (numb) => {
-  if (numb < 2) {
-    return false;
-  }
-  if (numb % 2 === 0) {
-    return false;
-  }
-  for (let i = 3; i < numb; i += 1) {
-    if (numb % i === 0) {
-      return false;
+const play = (funcGame) => {
+  console.log('start development');
+  welcome();
+  const userName = askName();
+  const gameIter = (parameter, round) => {
+    const {
+      user, task, calcTrueResult, condition,
+    } = parameter;
+    console.log('calc true result -> ', calcTrueResult);
+    condition();
+    if (round > 3) {
+      congratulations(user);
+      endGame();
     }
-  }
-  return true;
+    askQuestion(task);
+    const userAnswer = askAnswer();
+
+    if (!equalAnswer(userAnswer, calcTrueResult)) {
+      oops(user, userAnswer, calcTrueResult);
+      endGame();
+    }
+    correctAnswer();
+    return gameIter(funcGame(user), round + 1);
+  };
+  return gameIter(funcGame(userName), 1);
 };
 
 export {
-  askName, askAnswer, welcome, getRandomNumber, congratulations, oops,
-  endGame, askQuestion, equalAnswer, correctAnswer, getRandomOperation,
-  isPrime,
+  welcome, getRandomNumber, getRandomOperation, play,
 };
