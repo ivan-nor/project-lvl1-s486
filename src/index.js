@@ -43,14 +43,14 @@ const oops = (userName, userAnswer, isRight) => console.log(
 );
 
 const play = (funcGame) => {
-  console.log('start development');
+  // console.log('start development');
   welcome();
   const userName = askName();
   const gameIter = (parameter, round) => {
     const {
       user, task, calcTrueResult, condition,
     } = parameter;
-    console.log('calc true result -> ', calcTrueResult);
+    // console.log('calc true result -> ', calcTrueResult);
     condition();
     if (round > 3) {
       congratulations(user);
