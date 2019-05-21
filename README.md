@@ -25,12 +25,12 @@ In the project it was necessary to implement a set of mini-games launched from t
 
 **Examples of games**:
 Even number:
-[![asciicast](https://asciinema.org/a/0IZ5LH1ObIQHEk0yTmbfe9BWj.svg)](https://asciinema.org/a/0IZ5LH1ObIQHEk0yTmbfe9BWj)
+[![asciicast](https://asciinema.org/a/ZbQdioM15cUi1ZM4nMOYkB3DS.svg)](https://asciinema.org/a/ZbQdioM15cUi1ZM4nMOYkB3DS)
 Calculate the expression:
-[![asciicast](https://asciinema.org/a/SkNYBJVsjbCuXl3XFTZTwgywh.svg)](https://asciinema.org/a/SkNYBJVsjbCuXl3XFTZTwgywh)
+[![asciicast](https://asciinema.org/a/XhjCv8bLhzoSlSVplLU0JUwpC.svg)](https://asciinema.org/a/XhjCv8bLhzoSlSVplLU0JUwpC)
 Greatest common divisor:
-[![asciicast](https://asciinema.org/a/zzIoOl3xWReHgO3WxrcOVtlRj.svg)](https://asciinema.org/a/zzIoOl3xWReHgO3WxrcOVtlRj)
+[![asciicast](https://asciinema.org/a/wQQCnII6A1P3tYBH3Ds6RKBEk.svg)](https://asciinema.org/a/wQQCnII6A1P3tYBH3Ds6RKBEk)
 Guess missing number:
-[![asciicast](https://asciinema.org/a/olrdbH9QNADcGDtDZu9JWsxQE.svg)](https://asciinema.org/a/olrdbH9QNADcGDtDZu9JWsxQE)
+[![asciicast](https://asciinema.org/a/owjSimzmkQAKmdzx6DBwVCoaE.svg)](https://asciinema.org/a/owjSimzmkQAKmdzx6DBwVCoaE)
 Prime number:
-[![asciicast](https://asciinema.org/a/y73jUGxlkcG9CLu16hZwRxP8g.svg)](https://asciinema.org/a/y73jUGxlkcG9CLu16hZwRxP8g)
+[![asciicast](https://asciinema.org/a/IyIlwXc1umL5MLqdStk28ulKM.svg)](https://asciinema.org/a/IyIlwXc1umL5MLqdStk28ulKM)
