@@ -22,7 +22,8 @@ export default (game) => {
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (!(userAnswer === calcTrueResult)) {
-      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${calcTrueResult}'. Let's try again, ${userName}!`;
+      const result = `'${userAnswer}' is wrong answer ;(. Correct answer was '${calcTrueResult}'. Let's try again, ${userName}!`;
+      return console.log(result);
     }
     console.log('Correct!');
 
