@@ -1,29 +1,25 @@
-import {
-  welcome, askName, askAnswer, askQuestion, equalAnswer,
-  correctAnswer, oops, congratulations, endGame,
-} from './utils';
-
+import readlineSync from 'readline-sync';
 
 export default (funcGame) => {
-  welcome();
-  const userName = askName();
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name, please? ');
+  console.log(`Hello, ${userName}!`);
+
   const [, , condition] = funcGame();
   console.log(condition);
-  const gameIter = (parameter, round) => {
+  const gameIter = (parameter, round, lastRound) => {
     const [task, calcTrueResult] = parameter;
-    if (round > 3) {
-      congratulations(userName);
-      endGame();
+    if (round > lastRound) {
+      return console.log(`Congratulations, ${userName}!`);
     }
-    askQuestion(task);
-    const userAnswer = askAnswer();
+    console.log(`Question: ${task} ?`);
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    if (!equalAnswer(userAnswer, calcTrueResult)) {
-      oops(userName, userAnswer, calcTrueResult);
-      endGame();
+    if (!(userAnswer === calcTrueResult)) {
+      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${calcTrueResult}'. Let's try again, ${userName}!`;
     }
-    correctAnswer();
-    return gameIter(funcGame(), round + 1);
+    console.log('Correct!');
+    return gameIter(funcGame(), round + 1, lastRound);
   };
-  return gameIter(funcGame(), 1);
+  return gameIter(funcGame(), 1, 3);
 };
