@@ -1,6 +1,4 @@
-import { getRandomNumber, getRandomOperation } from '../index';
-
-const conditionGameProgress = () => console.log('What number is missing in the progression?');
+import { getRandomNumber, getRandomOperation } from '../utils';
 
 const generateProgress = (begin, step, operation) => {
   const resultArray = [];
@@ -19,7 +17,7 @@ const removeRandomElement = (array, index) => {
   return progress;
 };
 
-export default (user) => {
+export default () => {
   const begin = getRandomNumber(0, 10);
   const step = getRandomNumber(1, 10);
   const operation = getRandomOperation(2);
@@ -27,12 +25,12 @@ export default (user) => {
   const progression = generateProgress(begin, step, operation);
   const questionProgress = removeRandomElement(progression, randomPassElement);
   const trueResult = progression[randomPassElement];
-  const result = {
-    user,
-    task: questionProgress.join(', '),
-    calcTrueResult: String(trueResult),
-    condition: () => conditionGameProgress(),
-  };
-
-  return result;
+  const task = questionProgress.join(', ');
+  const calcTrueResult = String(trueResult);
+  const condition = 'What number is missing in the progression?';
+  return [
+    task,
+    calcTrueResult,
+    condition,
+  ];
 };

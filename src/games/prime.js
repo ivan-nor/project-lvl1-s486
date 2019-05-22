@@ -1,6 +1,4 @@
-import { getRandomNumber } from '../index';
-
-const conditionGamePrime = () => console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+import { getRandomNumber } from '../utils';
 
 const stringIsPrime = numb => ((!numb) ? 'no' : 'yes');
 
@@ -19,11 +17,13 @@ export const isPrime = (numb) => {
   return true;
 };
 
-export default user => ({
-  user,
-  task: getRandomNumber(1, 100),
-  get calcTrueResult() {
-    return stringIsPrime(isPrime(this.task));
-  },
-  condition: () => conditionGamePrime(),
-});
+export default () => {
+  const task = getRandomNumber(1, 100);
+  const calcTrueResult = stringIsPrime(isPrime(task));
+  const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  return [
+    task,
+    calcTrueResult,
+    condition,
+  ];
+};

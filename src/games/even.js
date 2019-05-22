@@ -1,19 +1,17 @@
-import { getRandomNumber } from '../index';
-
-const conditionsGamesEven = () => {
-  console.log('Answer "yes" if number even otherwise answer "no"');
-};
+import { getRandomNumber } from '../utils';
 
 const getEven = (number) => {
   const result = number % 2 === 0 ? 'yes' : 'no';
   return result;
 };
 
-export default user => ({
-  user,
-  task: getRandomNumber(),
-  get calcTrueResult() {
-    return getEven(this.task);
-  },
-  condition: () => conditionsGamesEven(),
-});
+export default () => {
+  const task = getRandomNumber();
+  const calcTrueResult = getEven(task);
+  const condition = 'Answer "yes" if number even otherwise answer "no"';
+  return [
+    task,
+    calcTrueResult,
+    condition,
+  ];
+};

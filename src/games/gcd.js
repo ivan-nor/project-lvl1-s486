@@ -1,6 +1,4 @@
-import { getRandomNumber } from '../index';
-
-const conditionsGamesGcd = () => console.log('Find the greatest common divisor of given numbers.');
+import { getRandomNumber } from '../utils';
 
 const gcdRecursion = (first, second) => {
   let n1 = first;
@@ -19,15 +17,16 @@ const gcdRecursion = (first, second) => {
   return gcdRecursion(n2, n1 % n2);
 };
 
-export default (user) => {
+export default () => {
   const first = getRandomNumber();
   const second = getRandomNumber();
-  const calcTrueResult = gcdRecursion(first, second);
-  const result = {
-    user,
-    task: `${first} and ${second}`,
-    calcTrueResult: String(calcTrueResult),
-    condition: () => conditionsGamesGcd(),
-  };
-  return result;
+  const gsd = gcdRecursion(first, second);
+  const task = `${first} and ${second}`;
+  const calcTrueResult = String(gsd);
+  const condition = 'Find the greatest common divisor of given numbers.';
+  return [
+    task,
+    calcTrueResult,
+    condition,
+  ];
 };

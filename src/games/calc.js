@@ -1,23 +1,18 @@
 import {
   getRandomNumber, getRandomOperation,
-} from '../index';
+} from '../utils';
 
-const conditionsGamesCalc = () => console.log('What is the result of the expression?');
-
-const getStringCalc = (first, second, operation) => `${first}${operation}${second}`;
-
-export default (user) => {
+export default () => {
   const first = getRandomNumber();
   const second = getRandomNumber();
   const operation = getRandomOperation(3);
-  const result = {
-    user,
-    task: getStringCalc(first, second, operation),
-    get calcTrueResult() {
-      // eslint-disable-next-line no-eval
-      return String(eval(this.task));
-    },
-    condition: () => conditionsGamesCalc(),
-  };
-  return result;
+  const task = `${first}${operation}${second}`;
+  // eslint-disable-next-line no-eval
+  const calcTrueResult = String(eval(task));
+  const condition = 'What is the result of the expression?';
+  return [
+    task,
+    calcTrueResult,
+    condition,
+  ];
 };
