@@ -1,4 +1,5 @@
 import { getRandomNumber, getRandomOperation } from '../utils';
+import engine from '..';
 
 const generateProgress = (begin, step, operation) => {
   const resultArray = [];
@@ -18,19 +19,22 @@ const removeRandomElement = (array, index) => {
 };
 
 export default () => {
-  const begin = getRandomNumber(0, 10);
-  const step = getRandomNumber(1, 10);
-  const operation = getRandomOperation(2);
-  const randomPassElement = getRandomNumber(0, 9);
-  const progression = generateProgress(begin, step, operation);
-  const questionProgress = removeRandomElement(progression, randomPassElement);
-  const trueResult = progression[randomPassElement];
-  const task = questionProgress.join(', ');
-  const calcTrueResult = String(trueResult);
-  const condition = 'What number is missing in the progression?';
-  return [
-    task,
-    calcTrueResult,
-    condition,
-  ];
+  const gameProgression = () => {
+    const begin = getRandomNumber(0, 10);
+    const step = getRandomNumber(1, 10);
+    const operation = getRandomOperation(2);
+    const randomPassElement = getRandomNumber(0, 9);
+    const progression = generateProgress(begin, step, operation);
+    const questionProgress = removeRandomElement(progression, randomPassElement);
+    const trueResult = progression[randomPassElement];
+    const task = questionProgress.join(', ');
+    const calcTrueResult = String(trueResult);
+    const condition = 'What number is missing in the progression?';
+    return [
+      task,
+      calcTrueResult,
+      condition,
+    ];
+  };
+  return engine(gameProgression);
 };

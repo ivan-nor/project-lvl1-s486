@@ -1,4 +1,5 @@
 import { getRandomNumber } from '../utils';
+import engine from '..';
 
 const stringIsPrime = numb => ((!numb) ? 'no' : 'yes');
 
@@ -18,12 +19,15 @@ export const isPrime = (numb) => {
 };
 
 export default () => {
-  const task = getRandomNumber(1, 100);
-  const calcTrueResult = stringIsPrime(isPrime(task));
-  const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  return [
-    task,
-    calcTrueResult,
-    condition,
-  ];
+  const gamePrime = () => {
+    const task = getRandomNumber(1, 100);
+    const calcTrueResult = stringIsPrime(isPrime(task));
+    const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    return [
+      task,
+      calcTrueResult,
+      condition,
+    ];
+  };
+  return engine(gamePrime);
 };
