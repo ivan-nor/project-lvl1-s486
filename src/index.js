@@ -26,8 +26,8 @@ export default (game, condition) => {
     }
     console.log('Correct!');
 
-    return gameIter(game(), round + 1, lastRound);
+    return gameIter(game, round + 1, lastRound);
   };
 
-  return gameIter(game(), 1, numberOfRounds);
+  return gameIter(game, 1, numberOfRounds);
 };

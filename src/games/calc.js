@@ -33,8 +33,7 @@ const gameCalc = () => {
   const operation = getRandomStringOperation();
   const task = `${firstNum}${operation}${secondNum}`;
   const calcTrueResult = calcExpressionString(firstNum, secondNum, operation);
-  const generateGame = () => [task, calcTrueResult];
-  return generateGame;
+  return [task, calcTrueResult];
 };
 
 export default () => engine(gameCalc, condition);

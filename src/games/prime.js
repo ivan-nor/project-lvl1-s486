@@ -26,8 +26,7 @@ export const isPrime = (num) => {
 const gamePrime = () => {
   const task = getRandomNumber(1, 100);
   const calcTrueResult = stringBoolean(isPrime(task));
-  const generateGame = () => [task, calcTrueResult];
-  return generateGame;
+  return [task, calcTrueResult];
 };
 
 export default () => engine(gamePrime, condition);

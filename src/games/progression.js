@@ -30,8 +30,7 @@ const gameProgression = () => {
   const trueResult = progression[hiddenElementPosition];
   const task = questionProgress.join(' ');
   const calcTrueResult = String(trueResult);
-  const generateGame = () => [task, calcTrueResult];
-  return generateGame;
+  return [task, calcTrueResult];
 };
 
 export default () => engine(gameProgression, condition);

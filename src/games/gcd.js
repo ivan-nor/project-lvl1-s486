@@ -22,8 +22,7 @@ const gameGcd = () => {
   const numberGcd = getGcd(first, second);
   const task = `${first} and ${second}`;
   const calcTrueResult = String(numberGcd);
-  const generateGame = () => [task, calcTrueResult];
-  return generateGame;
+  return [task, calcTrueResult];
 };
 
 export default () => engine(gameGcd, condition);

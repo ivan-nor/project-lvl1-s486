@@ -10,8 +10,7 @@ const getStringEven = number => ((isEven(number)) ? 'yes' : 'no');
 const gameEven = () => {
   const task = getRandomNumber();
   const calcTrueResult = getStringEven(task);
-  const generateGame = () => [task, calcTrueResult];
-  return generateGame;
+  return [task, calcTrueResult];
 };
 
 export default () => engine(gameEven, condition);
