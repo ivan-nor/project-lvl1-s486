@@ -1,21 +1,23 @@
 import readlineSync from 'readline-sync';
 
+const numberOfRounds = 3;
+
 export default (game) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name, please? ');
   console.log(`Hello, ${userName}!`);
 
-  const gameIter = (parameter, round, lastRound) => {
-    const [task, calcTrueResult, condition] = parameter;
+  const [, condition] = game();
+  console.log(condition);
 
+  const gameIter = (parameter, round, lastRound) => {
     if (round > lastRound) {
       return console.log(`Congratulations, ${userName}!`);
     }
 
-    if (round === 1) {
-      console.log(condition);
-    }
+    const [generateGame] = parameter;
+    const [task, calcTrueResult] = generateGame();
 
     console.log(`Question: ${task} ?`);
 
@@ -30,5 +32,5 @@ export default (game) => {
     return gameIter(game(), round + 1, lastRound);
   };
 
-  return gameIter(game(), 1, 3);
+  return gameIter(game(), 1, numberOfRounds);
 };

@@ -1,34 +1,31 @@
-import { getRandomNumber } from '../utils';
+import getRandomNumber from '../utils';
 import engine from '..';
 
-const gcdRecursion = (first, second) => {
-  let n1 = first;
-  let n2 = second;
-  if (n2 === 0) {
-    return n1;
+const condition = 'Find the greatest common divisor of given numbers.';
+
+const getGcd = (first, second) => {
+  if (second === 0) {
+    return first;
   }
-  if (n1 < n2) {
-    const t = n1;
-    n1 = n2;
-    n2 = t;
+  if (first % second === 0) {
+    return second;
   }
-  if (n1 % n2 === 0) {
-    return n2;
+  if (first < second) {
+    return getGcd(first, second % first);
   }
-  return gcdRecursion(n2, n1 % n2);
+  return getGcd(second, first % second);
 };
 
 export default () => {
   const gameGcd = () => {
     const first = getRandomNumber();
     const second = getRandomNumber();
-    const gsd = gcdRecursion(first, second);
+    const numberGcd = getGcd(first, second);
     const task = `${first} and ${second}`;
-    const calcTrueResult = String(gsd);
-    const condition = 'Find the greatest common divisor of given numbers.';
+    const calcTrueResult = String(numberGcd);
+    const generateGame = () => [task, calcTrueResult];
     return [
-      task,
-      calcTrueResult,
+      generateGame,
       condition,
     ];
   };

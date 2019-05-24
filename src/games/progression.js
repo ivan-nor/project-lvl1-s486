@@ -1,13 +1,16 @@
-import { getRandomNumber, getRandomOperation } from '../utils';
+import getRandomNumber from '../utils';
 import engine from '..';
 
-const generateProgress = (begin, step, operation) => {
-  const resultArray = [];
-  for (let i = 0; i < 10; i += 1) {
-    const stringFormula = `begin ${operation} (step * ${i})`;
-    // eslint-disable-next-line no-eval
-    const newEl = eval(stringFormula);
-    resultArray.push(newEl);
+const condition = 'What number is missing in the progression?';
+
+const limitNumberOfProgression = 10;
+const lengthProgression = 10;
+
+const generateProgress = (begin, step) => {
+  const resultArray = [begin];
+  for (let i = 1; i < lengthProgression; i += 1) {
+    const newElement = resultArray[i - 1] + step;
+    resultArray.push(newElement);
   }
   return resultArray;
 };
@@ -20,19 +23,17 @@ const removeRandomElement = (array, index) => {
 
 export default () => {
   const gameProgression = () => {
-    const begin = getRandomNumber(0, 10);
-    const step = getRandomNumber(1, 10);
-    const operation = getRandomOperation(2);
-    const randomPassElement = getRandomNumber(0, 9);
-    const progression = generateProgress(begin, step, operation);
-    const questionProgress = removeRandomElement(progression, randomPassElement);
-    const trueResult = progression[randomPassElement];
-    const task = questionProgress.join(', ');
+    const begin = getRandomNumber(-limitNumberOfProgression, limitNumberOfProgression);
+    const step = getRandomNumber(-limitNumberOfProgression, limitNumberOfProgression);
+    const hiddenElementPosition = getRandomNumber(0, lengthProgression - 1);
+    const progression = generateProgress(begin, step);
+    const questionProgress = removeRandomElement(progression, hiddenElementPosition);
+    const trueResult = progression[hiddenElementPosition];
+    const task = questionProgress.join(' ');
     const calcTrueResult = String(trueResult);
-    const condition = 'What number is missing in the progression?';
+    const generateGame = () => [task, calcTrueResult];
     return [
-      task,
-      calcTrueResult,
+      generateGame,
       condition,
     ];
   };

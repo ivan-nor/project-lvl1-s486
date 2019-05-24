@@ -1,19 +1,20 @@
-import { getRandomNumber } from '../utils';
+import getRandomNumber from '../utils';
 import engine from '..';
 
-const getEven = (number) => {
-  const result = number % 2 === 0 ? 'yes' : 'no';
-  return result;
-};
+const condition = 'Answer "yes" if number even otherwise answer "no"';
+
+const isEven = num => num % 2 === 0;
+
+const getStringEven = number => ((isEven(number)) ? 'yes' : 'no');
+
 
 export default () => {
   const gameEven = () => {
     const task = getRandomNumber();
-    const calcTrueResult = getEven(task);
-    const condition = 'Answer "yes" if number even otherwise answer "no"';
+    const calcTrueResult = getStringEven(task);
+    const generateGame = () => [task, calcTrueResult];
     return [
-      task,
-      calcTrueResult,
+      generateGame,
       condition,
     ];
   };

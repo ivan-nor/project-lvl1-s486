@@ -1,20 +1,42 @@
-import {
-  getRandomNumber, getRandomOperation,
-} from '../utils';
+import getRandomNumber from '../utils';
 import engine from '..';
+
+const condition = 'What is the result of the expression?';
+
+const getRandomStringOperation = () => {
+  const operations = ['+', '-', '*'];
+  const random = getRandomNumber(0, operations.length - 1);
+  return operations[random];
+};
+
+const calcExpressionString = (firstNum, secondNum, operation) => {
+  let result;
+  switch (operation) {
+    case '+':
+      result = firstNum + secondNum;
+      break;
+    case '-':
+      result = firstNum - secondNum;
+      break;
+    case '*':
+      result = firstNum * secondNum;
+      break;
+    default:
+      break;
+  }
+  return String(result);
+};
 
 export default () => {
   const gameCalc = () => {
-    const first = getRandomNumber();
-    const second = getRandomNumber();
-    const operation = getRandomOperation(3);
-    const task = `${first}${operation}${second}`;
-    // eslint-disable-next-line no-eval
-    const calcTrueResult = String(eval(task));
-    const condition = 'What is the result of the expression?';
+    const firstNum = getRandomNumber();
+    const secondNum = getRandomNumber();
+    const operation = getRandomStringOperation();
+    const task = `${firstNum}${operation}${secondNum}`;
+    const calcTrueResult = calcExpressionString(firstNum, secondNum, operation);
+    const generateGame = () => [task, calcTrueResult];
     return [
-      task,
-      calcTrueResult,
+      generateGame,
       condition,
     ];
   };
