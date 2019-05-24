@@ -8,7 +8,7 @@ const lengthProgression = 10;
 
 const generateProgress = (begin, step, length) => {
   const resultArray = [];
-  for (let i = 0; i < length - 1; i += 1) {
+  for (let i = 0; i < length; i += 1) {
     const newElement = begin + step * i;
     resultArray.push(newElement);
   }
@@ -24,8 +24,8 @@ const removeRandomElement = (array, index) => {
 const gameProgression = () => {
   const begin = getRandomNumber(-limitNumberOfProgression, limitNumberOfProgression);
   const step = getRandomNumber(-limitNumberOfProgression, limitNumberOfProgression);
-  const hiddenElementPosition = getRandomNumber(0, lengthProgression);
-  const progression = generateProgress(begin, step);
+  const hiddenElementPosition = getRandomNumber(0, lengthProgression - 1);
+  const progression = generateProgress(begin, step, lengthProgression);
   const questionProgress = removeRandomElement(progression, hiddenElementPosition);
   const trueResult = progression[hiddenElementPosition];
   const task = questionProgress.join(' ');
