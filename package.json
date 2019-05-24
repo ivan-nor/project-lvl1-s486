@@ -1,6 +1,6 @@
 {
   "name": "hexlet-brain-games-nor",
-  "version": "1.9.13",
+  "version": "1.9.14",
   "main": "index.js",
   "files": [
     "dist"
@@ -9,7 +9,7 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "eslint": "make",
+    "eslint": "make lint",
     "test": "jest"
   },
   "bin": {
