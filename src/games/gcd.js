@@ -16,18 +16,14 @@ const getGcd = (first, second) => {
   return getGcd(second, first % second);
 };
 
-export default () => {
-  const gameGcd = () => {
-    const first = getRandomNumber();
-    const second = getRandomNumber();
-    const numberGcd = getGcd(first, second);
-    const task = `${first} and ${second}`;
-    const calcTrueResult = String(numberGcd);
-    const generateGame = () => [task, calcTrueResult];
-    return [
-      generateGame,
-      condition,
-    ];
-  };
-  return engine(gameGcd);
+const gameGcd = () => {
+  const first = getRandomNumber();
+  const second = getRandomNumber();
+  const numberGcd = getGcd(first, second);
+  const task = `${first} and ${second}`;
+  const calcTrueResult = String(numberGcd);
+  const generateGame = () => [task, calcTrueResult];
+  return generateGame;
 };
+
+export default () => engine(gameGcd, condition);

@@ -27,18 +27,14 @@ const calcExpressionString = (firstNum, secondNum, operation) => {
   return String(result);
 };
 
-export default () => {
-  const gameCalc = () => {
-    const firstNum = getRandomNumber();
-    const secondNum = getRandomNumber();
-    const operation = getRandomStringOperation();
-    const task = `${firstNum}${operation}${secondNum}`;
-    const calcTrueResult = calcExpressionString(firstNum, secondNum, operation);
-    const generateGame = () => [task, calcTrueResult];
-    return [
-      generateGame,
-      condition,
-    ];
-  };
-  return engine(gameCalc);
+const gameCalc = () => {
+  const firstNum = getRandomNumber();
+  const secondNum = getRandomNumber();
+  const operation = getRandomStringOperation();
+  const task = `${firstNum}${operation}${secondNum}`;
+  const calcTrueResult = calcExpressionString(firstNum, secondNum, operation);
+  const generateGame = () => [task, calcTrueResult];
+  return generateGame;
 };
+
+export default () => engine(gameCalc, condition);

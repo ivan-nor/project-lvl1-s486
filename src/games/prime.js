@@ -23,15 +23,11 @@ export const isPrime = (num) => {
   return true;
 };
 
-export default () => {
-  const gamePrime = () => {
-    const task = getRandomNumber(1, 100);
-    const calcTrueResult = stringBoolean(isPrime(task));
-    const generateGame = () => [task, calcTrueResult];
-    return [
-      generateGame,
-      condition,
-    ];
-  };
-  return engine(gamePrime);
+const gamePrime = () => {
+  const task = getRandomNumber(1, 100);
+  const calcTrueResult = stringBoolean(isPrime(task));
+  const generateGame = () => [task, calcTrueResult];
+  return generateGame;
 };
+
+export default () => engine(gamePrime, condition);
