@@ -2,21 +2,18 @@ import readlineSync from 'readline-sync';
 
 const numberOfRounds = 3;
 
-export default (game) => {
+export default (game, condition) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name, please? ');
   console.log(`Hello, ${userName}!`);
 
-  const [, condition] = game();
   console.log(condition);
 
-  const gameIter = (parameter, round, lastRound) => {
+  const gameIter = (generateGame, round, lastRound) => {
     if (round > lastRound) {
       return console.log(`Congratulations, ${userName}!`);
     }
-
-    const [generateGame] = parameter;
     const [task, calcTrueResult] = generateGame();
 
     console.log(`Question: ${task} ?`);
