@@ -12,7 +12,8 @@ export default (game, condition) => {
 
   const gameIter = (generateGame, round) => {
     if (round > numberOfRounds) {
-      return console.log(`Congratulations, ${userName}!`);
+      console.log(`Congratulations, ${userName}!`);
+      return;
     }
     const [task, calcTrueResult] = generateGame();
 
@@ -22,11 +23,12 @@ export default (game, condition) => {
 
     if (!(userAnswer === calcTrueResult)) {
       const result = `'${userAnswer}' is wrong answer ;(. Correct answer was '${calcTrueResult}'. Let's try again, ${userName}!`;
-      return console.log(result);
+      console.log(result);
+      return;
     }
     console.log('Correct!');
 
-    return gameIter(game, round + 1);
+    gameIter(game, round + 1);
   };
 
   gameIter(game, 1);
