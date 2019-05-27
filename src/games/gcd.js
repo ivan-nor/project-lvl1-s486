@@ -10,10 +10,7 @@ const getGcd = (first, second) => {
   if (first % second === 0) {
     return second;
   }
-  if (first < second) {
-    return getGcd(first, second % first);
-  }
-  return getGcd(second, first % second);
+  return first < second ? getGcd(first, second % first) : getGcd(second, first % second);
 };
 
 const gameGcd = () => {
