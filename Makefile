@@ -18,3 +18,5 @@ brain-prime:
 	npx babel-node src/bin/brain-prime.js
 test:
 	npm test
+test-coverage:
+	npm test -- --coverage
